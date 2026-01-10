@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppCepeRio.Models;
 
-internal class OnBoardingContent
+public class OnBoardingContent
 {
     public int Id { get; set; }
     public string? Title { get; set; }
