@@ -1,16 +1,164 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCepeRio.Views.OnBoarding"
-             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             xmlns:viewmodel="clr-namespace:AppCepeRio.ViewModels"
-             x:DataType="viewmodel:OnBoardingViewModel"
-             Title="OnBoarding">
-    
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="AppCepeRio.Views.OnBoarding"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:AppCepeRio.Models"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:viewmodel="clr-namespace:AppCepeRio.ViewModels"
+    Title="OnBoarding"
+    x:DataType="viewmodel:OnBoardingViewModel"
+    BackgroundColor="{AppThemeBinding Dark={StaticResource MainDarkBackgroundColor},
+                                      Light={StaticResource MainLightBackgroundColor}}"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.Resources>
+        <!--  MainBackground  -->
+        <!--<Color x:Key="MainDarkBackgroundColor">#1e1e1e</Color>
+    <Color x:Key="MainLightBackgroundColor">#000</Color>-->
+
+        <Color x:Key="BorderDarkBackground">#151515</Color>
+        <Color x:Key="BorderLightBackground">#dddddd</Color>
+
+        <!--<Style x:Key="ViewBackground" TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource MainDarkBackgroundColor}, Light={StaticResource MainLightBackgroundColor}}" />
+    </Style>-->
+
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="Stroke" Value="Transparent" />
+            <Setter Property="VerticalOptions" Value="Start" />
+            <Setter Property="StrokeShape" Value="RoundRectangle 0, 0, 110, 110" />
+            <Setter Property="HeightRequest" Value="380" />
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource BorderDarkBackground}, Light={StaticResource BorderLightBackground}}" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#000000" />
+    </ContentPage.Behaviors>
+
+    <Grid RowDefinitions="*, 180">
+        <Border Grid.ColumnSpan="2" Style="{StaticResource BorderStyle}">
+
+            <!--  Gradient Color test  -->
+            <!--<Border.Background>
+            <LinearGradientBrush StartPoint="1, 0" EndPoint="0, 1">
+                <GradientStop Offset="0.1" Color="#fcc615" />
+                <GradientStop Offset="3.0" Color="#006f5d" />
+            </LinearGradientBrush>
+        </Border.Background>-->
+        </Border>
+
+        <Grid
+            ColumnDefinitions="*, *"
+            ColumnSpacing="0"
+            HorizontalOptions="Center"
+            RowDefinitions="60">
+
+            <Image
+                Margin="0,10"
+                Source="cepelogo.png"
+                VerticalOptions="Start"
+                WidthRequest="40" />
+
+            <Label
+                Grid.Column="1"
+                FontAttributes="Bold"
+                FontSize="19"
+                Text="Bem-Vindo ao Cepe!"
+                TextColor="{AppThemeBinding Dark={StaticResource White},
+                                            Light={StaticResource Black}}"
+                VerticalTextAlignment="Center" />
+        </Grid>
+
+        <CarouselView
+            x:Name="OnBoardingCarousel"
+            HorizontalScrollBarVisibility="Never"
+            IndicatorView="indicatorView"
+            ItemsSource="{Binding OnBoardingContents}"
+            Loop="False"
+            PositionChanged="OnBoardingCarousel_PositionChanged">
+            <CarouselView.ItemTemplate>
+                <DataTemplate x:DataType="model:OnBoardingContent">
+                    <Grid
+                        Padding="5"
+                        RowDefinitions="400, Auto, *"
+                        RowSpacing="15">
+
+                        <Image Aspect="AspectFit" Source="{Binding Image}" />
+
+                        <Label
+                            Grid.Row="1"
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="32"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Title}"
+                            TextColor="{AppThemeBinding Dark={StaticResource GrayLabelTitle},
+                                                        Light={StaticResource DarkLabelTitle}}"
+                            VerticalOptions="Center" />
+
+                        <Label
+                            Grid.Row="2"
+                            FontAttributes="Bold"
+                            FontFamily="MainFont"
+                            FontSize="18"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Description}"
+                            TextColor="{AppThemeBinding Dark={StaticResource GrayLabelDescription},
+                                                        Light={StaticResource DarkLabelDescription}}"
+                            VerticalOptions="Start" />
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            Padding="15"
+            Spacing="25">
+
+            <IndicatorView
+                x:Name="indicatorView"
+                HorizontalOptions="Center"
+                IndicatorColor="#aaaaaa"
+                SelectedIndicatorColor="#13b158">
+                <IndicatorView.IndicatorTemplate>
+                    <DataTemplate>
+                        <Border
+                            HeightRequest="6"
+                            StrokeShape="RoundRectangle 15"
+                            StrokeThickness="0"
+                            WidthRequest="40" />
+                    </DataTemplate>
+                </IndicatorView.IndicatorTemplate>
+            </IndicatorView>
+
+            <Button
+                x:Name="OnBoardingBtn"
+                BackgroundColor="{AppThemeBinding Dark={StaticResource DarkModeGreenButton},
+                                                  Light={StaticResource LightModeGreenButton}}"
+                Clicked="OnBoardingBtn_Clicked"
+                CornerRadius="10"
+                FontAttributes="Bold"
+                FontSize="20"
+                HeightRequest="65"
+                TextColor="White" />
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Text="Já é um associado? "
+                    TextColor="{AppThemeBinding Dark={StaticResource GrayLabelOnBoarding},
+                                                Light={StaticResource Gray900}}" />
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Text="Fazer login"
+                    TextColor="#13b158" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>
