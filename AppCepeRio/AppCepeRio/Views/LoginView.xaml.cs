@@ -6,4 +6,9 @@ public partial class LoginView : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void LoginBtn_Clicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync($"//{nameof(HomeView)}");
+    }
 }
