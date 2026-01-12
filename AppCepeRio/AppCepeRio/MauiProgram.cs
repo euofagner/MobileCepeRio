@@ -2,6 +2,7 @@
 using AppCepeRio.Views;
 using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Platform;
 
 namespace AppCepeRio
 {
@@ -28,6 +29,13 @@ namespace AppCepeRio
             builder.Services.AddTransient<OnBoarding>();
             builder.Services.AddTransient<AppShell>();
             builder.Services.AddTransient<App>();
+
+            Microsoft.Maui.Handlers.EntryHandler.Mapper.AppendToMapping("CustomEntry", (handler, view) =>
+            {
+#if ANDROID
+                handler.PlatformView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToPlatform());
+#endif
+            });
 
             return builder.Build();
         }
