@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:AppCepeRio"
     xmlns:views="clr-namespace:AppCepeRio.Views"
-    Title="AppCepeRio">
+    Title="AppCepeRio"
+    Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
         Title="OnBoarding"
@@ -17,4 +18,8 @@
         ContentTemplate="{DataTemplate views:LoginView}"
         Route="LoginView" />
 
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:HomeView}"
+        Route="HomeView" />
 </Shell>

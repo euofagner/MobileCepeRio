@@ -18,7 +18,7 @@ public partial class OnBoarding : ContentPage
 
         if (currentItem == items.Count - 1)
         {
-            await Shell.Current.GoToAsync($"//{nameof(LoginView)}");
+            await Shell.Current.GoToAsync("//LoginView");
         }
         else
             OnBoardingCarousel.CurrentItem = items[currentItem + 1];

@@ -1,4 +1,6 @@
-﻿namespace AppCepeRio
+﻿using AppCepeRio.Views;
+
+namespace AppCepeRio
 {
     public partial class AppShell : Shell
     {
