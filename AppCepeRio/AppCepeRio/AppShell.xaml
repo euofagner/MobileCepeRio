@@ -19,8 +19,33 @@
         ContentTemplate="{DataTemplate views:LoginView}"
         Route="LoginView" />
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate views:HomeView}"
-        Route="HomeView" />
+    <TabBar>
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate views:HomeView}"
+            Icon="home_tab.png"
+            Route="HomeView"
+            Shell.TabBarUnselectedColor="#4a8576" />
+
+        <ShellContent
+            Title="Eventos"
+            ContentTemplate="{DataTemplate views:EventsView}"
+            Icon="events_tab.png"
+            Route="EventsView"
+            Shell.TabBarUnselectedColor="#4a8576" />
+
+        <ShellContent
+            Title="Atividades"
+            ContentTemplate="{DataTemplate views:ActivitiesView}"
+            Icon="activities2_tab.png"
+            Route="ActivitiesView"
+            Shell.TabBarUnselectedColor="#4a8576" />
+
+        <ShellContent
+            Title="Perfil"
+            ContentTemplate="{DataTemplate views:ProfileView}"
+            Icon="profile_tab.png"
+            Route="ProfileView"
+            Shell.TabBarUnselectedColor="#4a8576" />
+    </TabBar>
 </Shell>
