@@ -1,12 +1,303 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCepeRio.Views.HomeView"
-             Title="HomeView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="AppCepeRio.Views.HomeView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="HomeView"
+    BackgroundColor="#000001">
+
+    <Grid
+        Padding="25,30"
+        ColumnDefinitions="*, *"
+        ColumnSpacing="10"
+        RowDefinitions="Auto, Auto, Auto, Auto, *"
+        RowSpacing="10">
+
+        <Label
+            Grid.ColumnSpan="2"
+            FontAttributes="Bold"
+            FontSize="35"
+            HorizontalOptions="Start"
+            Text="Olá, Fagner" />
+
+        <Border
+            Grid.Row="1"
+            BackgroundColor="#111"
+            HeightRequest="100"
+            Stroke="Transparent"
+            StrokeShape="RoundRectangle 10"
+            VerticalOptions="Start">
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                <Image Source="events_tab.png" WidthRequest="33">
+                    <Image.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="#4a8576" />
+                    </Image.Behaviors>
+                </Image>
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="17"
+                    Text="Agenda"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Border>
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            BackgroundColor="#111"
+            HeightRequest="100"
+            Stroke="Transparent"
+            StrokeShape="RoundRectangle 10"
+            VerticalOptions="Start">
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                <Image Source="activities2_tab.png" WidthRequest="35">
+
+                    <Image.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="#4a8576" />
+                    </Image.Behaviors>
+                </Image>
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="17"
+                    Text="Atividades"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Border>
+
+        <Border
+            Grid.Row="2"
+            BackgroundColor="#111"
+            HeightRequest="100"
+            Stroke="Transparent"
+            StrokeShape="RoundRectangle 10"
+            VerticalOptions="Start">
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                <Image Source="home_tab.png" WidthRequest="35">
+                    <Image.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="#4a8576" />
+                    </Image.Behaviors>
+                </Image>
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="17"
+                    Text="Estrutura"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Border>
+
+        <Border
+            Grid.Row="2"
+            Grid.Column="2"
+            BackgroundColor="#111"
+            HeightRequest="100"
+            Stroke="Transparent"
+            StrokeShape="RoundRectangle 10"
+            VerticalOptions="Start">
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                <Image Source="clock.png" WidthRequest="35">
+
+                    <Image.Behaviors>
+                        <toolkit:IconTintColorBehavior TintColor="#4a8576" />
+                    </Image.Behaviors>
+                </Image>
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="17"
+                    Text="Agenda"
+                    VerticalOptions="Center" />
+            </HorizontalStackLayout>
+        </Border>
+
+        <Label
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            FontAttributes="Bold"
+            FontSize="22"
+            Text="Próximos eventos" />
+
+        <ScrollView Grid.Row="4" Grid.ColumnSpan="2">
+            <VerticalStackLayout Spacing="5">
+                <Border
+                    BackgroundColor="#111"
+                    HeightRequest="100"
+                    Stroke="Transparent"
+                    StrokeShape="RoundRectangle 10"
+                    VerticalOptions="Start">
+
+                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
+                        <Image Aspect="Fill" Source="swimming.jpg" />
+
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="Natação"
+                                VerticalOptions="Center" />
+
+                            <Label
+                                FontSize="15"
+                                Text="05 de junho"
+                                TextColor="#ccc"
+                                VerticalOptions="Center" />
+                        </VerticalStackLayout>
+
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#111"
+                    HeightRequest="100"
+                    Stroke="Transparent"
+                    StrokeShape="RoundRectangle 10"
+                    VerticalOptions="Start">
+
+                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
+                        <Image Aspect="Fill" Source="tennis.jpg" />
+
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="Natação"
+                                VerticalOptions="Center" />
+
+                            <Label
+                                FontSize="15"
+                                Text="05 de junho"
+                                TextColor="#ccc"
+                                VerticalOptions="Center" />
+                        </VerticalStackLayout>
+
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#111"
+                    HeightRequest="100"
+                    Stroke="Transparent"
+                    StrokeShape="RoundRectangle 10"
+                    VerticalOptions="Start">
+
+                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
+                        <Image Aspect="Fill" Source="futvolei.jpg" />
+
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="Natação"
+                                VerticalOptions="Center" />
+
+                            <Label
+                                FontSize="15"
+                                Text="05 de junho"
+                                TextColor="#ccc"
+                                VerticalOptions="Center" />
+                        </VerticalStackLayout>
+
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#111"
+                    HeightRequest="100"
+                    Stroke="Transparent"
+                    StrokeShape="RoundRectangle 10"
+                    VerticalOptions="Start">
+
+                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
+                        <Image Aspect="Fill" Source="functional.jpg" />
+
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="Natação"
+                                VerticalOptions="Center" />
+
+                            <Label
+                                FontSize="15"
+                                Text="05 de junho"
+                                TextColor="#ccc"
+                                VerticalOptions="Center" />
+                        </VerticalStackLayout>
+
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#111"
+                    HeightRequest="100"
+                    Stroke="Transparent"
+                    StrokeShape="RoundRectangle 10"
+                    VerticalOptions="Start">
+
+                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
+                        <Image Aspect="Fill" Source="tennis.jpg" />
+
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="Natação"
+                                VerticalOptions="Center" />
+
+                            <Label
+                                FontSize="15"
+                                Text="05 de junho"
+                                TextColor="#ccc"
+                                VerticalOptions="Center" />
+                        </VerticalStackLayout>
+
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border
+                    Grid.Row="4"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="#111"
+                    HeightRequest="100"
+                    Stroke="Transparent"
+                    StrokeShape="RoundRectangle 10"
+                    VerticalOptions="Start">
+
+                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
+                        <Image Aspect="Fill" Source="swimming_class.jpg" />
+
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="17"
+                                Text="Natação"
+                                VerticalOptions="Center" />
+
+                            <Label
+                                FontSize="15"
+                                Text="05 de junho"
+                                TextColor="#ccc"
+                                VerticalOptions="Center" />
+                        </VerticalStackLayout>
+
+                    </HorizontalStackLayout>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
 </ContentPage>

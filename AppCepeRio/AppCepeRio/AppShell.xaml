@@ -6,7 +6,8 @@
     xmlns:local="clr-namespace:AppCepeRio"
     xmlns:views="clr-namespace:AppCepeRio.Views"
     Title="AppCepeRio"
-    Shell.FlyoutBehavior="Flyout">
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
 
     <ShellContent
         Title="OnBoarding"
