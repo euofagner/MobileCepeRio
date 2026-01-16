@@ -14,12 +14,29 @@
         RowDefinitions="Auto, Auto, Auto, Auto, *"
         RowSpacing="10">
 
-        <Label
+        <Border
             Grid.ColumnSpan="2"
-            FontAttributes="Bold"
-            FontSize="35"
-            HorizontalOptions="Start"
-            Text="Olá, Fagner" />
+            Padding="16"
+            HeightRequest="90"
+            Stroke="Transparent"
+            StrokeShape="RoundRectangle 16">
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0.0" Color="#0E3B2F" />
+                    <GradientStop Offset="0.5" Color="#1F7A63" />
+                    <GradientStop Offset="1.0" Color="#0E3B2F" />
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Label
+                Grid.ColumnSpan="2"
+                FontAttributes="Bold"
+                FontFamily="MainFont"
+                FontSize="25"
+                HorizontalOptions="Start"
+                Text="Olá, Fagner 👋" />
+        </Border>
 
         <Border
             Grid.Row="1"
@@ -122,7 +139,7 @@
             Grid.ColumnSpan="2"
             FontAttributes="Bold"
             FontSize="22"
-            Text="Próximos eventos" />
+            Text="Atividades disponíveis" />
 
         <ScrollView Grid.Row="4" Grid.ColumnSpan="2">
             <VerticalStackLayout Spacing="5">
@@ -169,7 +186,7 @@
                             <Label
                                 FontAttributes="Bold"
                                 FontSize="17"
-                                Text="Natação"
+                                Text="Tenis"
                                 VerticalOptions="Center" />
 
                             <Label
@@ -198,7 +215,7 @@
                             <Label
                                 FontAttributes="Bold"
                                 FontSize="17"
-                                Text="Natação"
+                                Text="Futevôlei"
                                 VerticalOptions="Center" />
 
                             <Label
@@ -227,7 +244,7 @@
                             <Label
                                 FontAttributes="Bold"
                                 FontSize="17"
-                                Text="Natação"
+                                Text="Funcional"
                                 VerticalOptions="Center" />
 
                             <Label
@@ -256,7 +273,7 @@
                             <Label
                                 FontAttributes="Bold"
                                 FontSize="17"
-                                Text="Natação"
+                                Text="Tenis"
                                 VerticalOptions="Center" />
 
                             <Label
@@ -285,7 +302,7 @@
                             <Label
                                 FontAttributes="Bold"
                                 FontSize="17"
-                                Text="Natação"
+                                Text="Aula de natação"
                                 VerticalOptions="Center" />
 
                             <Label

@@ -31,8 +31,8 @@ public partial class OnBoardingViewModel : INotifyPropertyChanged
         OnBoardingContents.Add(new OnBoardingContent
         {
             Id = 1,
-            Title = "O CEPE agora é Mobile!",
-            Description = "O seu clube de sempre, agora também no celular.\r\nCom o novo aplicativo, você acompanha eventos, atividades e novidades do CEPE de onde estiver.",
+            Title = "Tenha o CEPE no seu bolso!",
+            Description = "O seu clube de sempre, agora também no celular.\r\nCom o novo aplicativo, você acompanha eventos, atividades, horários e avisos em tempo real de onde estiver.",
             Image = "onboardingfirstpicture.png"
         });
 

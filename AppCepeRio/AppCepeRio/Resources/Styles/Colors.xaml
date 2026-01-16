@@ -14,7 +14,7 @@
 
     <Color x:Key="GrayLabelTitle">#eee</Color>
     <Color x:Key="GrayLabelOnBoarding">#eee</Color>
-    <Color x:Key="GrayLabelDescription">#ccc</Color>
+    <Color x:Key="GrayLabelDescription">#aaa</Color>
 
     <Color x:Key="DarkLabelTitle">#000</Color>
     <Color x:Key="DarkLabelDescription">#ccc</Color>
