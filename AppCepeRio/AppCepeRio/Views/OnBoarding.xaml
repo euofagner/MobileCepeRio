@@ -82,7 +82,7 @@
                 <DataTemplate x:DataType="model:OnBoardingContent">
                     <Grid
                         Padding="5"
-                        RowDefinitions="350, Auto, *"
+                        RowDefinitions="360, Auto, *"
                         RowSpacing="15">
 
                         <Image Aspect="AspectFit" Source="{Binding Image}" />

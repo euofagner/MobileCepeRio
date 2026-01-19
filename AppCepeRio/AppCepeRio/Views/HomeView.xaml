@@ -16,26 +16,74 @@
 
         <Border
             Grid.ColumnSpan="2"
-            Padding="16"
-            HeightRequest="90"
+            Padding="14"
+            HeightRequest="80"
             Stroke="Transparent"
             StrokeShape="RoundRectangle 16">
 
             <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Offset="0.0" Color="#0E3B2F" />
-                    <GradientStop Offset="0.5" Color="#1F7A63" />
-                    <GradientStop Offset="1.0" Color="#0E3B2F" />
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0.0" Color="#0A1A14" />
+                    <GradientStop Offset="0.5" Color="#1A2A1B" />
+                    <GradientStop Offset="1.0" Color="#0F2E21" />
                 </LinearGradientBrush>
             </Border.Background>
 
-            <Label
-                Grid.ColumnSpan="2"
-                FontAttributes="Bold"
-                FontFamily="MainFont"
-                FontSize="25"
-                HorizontalOptions="Start"
-                Text="Olá, Fagner 👋" />
+            <Grid ColumnDefinitions="60, *, Auto" RowDefinitions="*, *">
+
+                <Image
+                    Grid.RowSpan="2"
+                    HeightRequest="75"
+                    Source="cepelogo.png"
+                    WidthRequest="75" />
+
+                <Border
+                    Grid.Row="1"
+                    Margin="5"
+                    BackgroundColor="#1FA37A"
+                    HeightRequest="19"
+                    HorizontalOptions="End"
+                    Stroke="Transparent"
+                    StrokeShape="RoundRectangle 18"
+                    VerticalOptions="Start"
+                    WidthRequest="19">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="11"
+                        HeightRequest="19"
+                        HorizontalTextAlignment="Center"
+                        Text="✔"
+                        VerticalTextAlignment="Center"
+                        WidthRequest="19" />
+                </Border>
+
+                <Label
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    FontAttributes="Bold"
+                    FontFamily="MainFont"
+                    FontSize="18"
+                    HorizontalOptions="Start"
+                    Text="Sócio ativo" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontAttributes="Bold"
+                    FontSize="12"
+                    Text="Sócio Efetivo • Validade: 12/2100"
+                    TextColor="#ccc" />
+
+                <Label
+                    Grid.RowSpan="2"
+                    Grid.Column="2"
+                    FontAttributes="Bold"
+                    FontSize="25"
+                    Padding="5"
+                    Text="&gt;"
+                    TextColor="#ccc"
+                    VerticalTextAlignment="Center" />
+            </Grid>
         </Border>
 
         <Border
