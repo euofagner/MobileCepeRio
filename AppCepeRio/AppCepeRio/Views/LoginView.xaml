@@ -80,6 +80,23 @@
             Text="Entrar"
             TextColor="White" />
 
+
+
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Text="Primeira vez no app?"
+                TextColor="#13b158" />
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalTextAlignment="Center"
+                Text="Criar senha"
+                TextColor="#ccc" />
+        </HorizontalStackLayout>
+
         <Label
             FontAttributes="Bold"
             FontSize="18"
