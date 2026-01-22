@@ -94,7 +94,7 @@
                 FontSize="18"
                 HorizontalTextAlignment="Center"
                 Text="Criar senha"
-                TextColor="#ccc" />
+                TextColor="#ddd" />
         </HorizontalStackLayout>
 
         <Label

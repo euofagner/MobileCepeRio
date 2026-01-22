@@ -11,10 +11,46 @@
         Padding="25,30"
         ColumnDefinitions="*, *"
         ColumnSpacing="10"
-        RowDefinitions="Auto, Auto, Auto, Auto, *"
+        RowDefinitions="Auto, Auto, Auto, Auto, Auto, *"
         RowSpacing="10">
 
+        <Label
+            Grid.ColumnSpan="2"
+            FontAttributes="Bold"
+            FontSize="25"
+            Text="Olá, Fagner 👋" />
+
+        <Grid Grid.Column="1" HorizontalOptions="End">
+            <Image
+                Margin="0,0,10,0"
+                HeightRequest="25"
+                Source="notification.png"
+                WidthRequest="23">
+
+                <Image.Behaviors>
+                    <toolkit:IconTintColorBehavior TintColor="#fff" />
+                </Image.Behaviors>
+            </Image>
+
+            <Border
+                BackgroundColor="#f44336"
+                HeightRequest="18"
+                HorizontalOptions="Center"
+                Stroke="Transparent"
+                StrokeShape="20"
+                VerticalOptions="Start"
+                WidthRequest="18">
+
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="12"
+                    HorizontalTextAlignment="Center"
+                    Text="1" />
+            </Border>
+        </Grid>
+
         <Border
+            Grid.Row="1"
             Grid.ColumnSpan="2"
             Padding="14"
             HeightRequest="80"
@@ -87,7 +123,7 @@
         </Border>
 
         <Border
-            Grid.Row="1"
+            Grid.Row="2"
             BackgroundColor="#111"
             HeightRequest="100"
             Stroke="Transparent"
@@ -110,7 +146,7 @@
         </Border>
 
         <Border
-            Grid.Row="1"
+            Grid.Row="2"
             Grid.Column="1"
             BackgroundColor="#111"
             HeightRequest="100"
@@ -135,7 +171,7 @@
         </Border>
 
         <Border
-            Grid.Row="2"
+            Grid.Row="3"
             BackgroundColor="#111"
             HeightRequest="100"
             Stroke="Transparent"
@@ -158,7 +194,7 @@
         </Border>
 
         <Border
-            Grid.Row="2"
+            Grid.Row="3"
             Grid.Column="2"
             BackgroundColor="#111"
             HeightRequest="100"
@@ -183,14 +219,14 @@
         </Border>
 
         <Label
-            Grid.Row="3"
+            Grid.Row="4"
             Grid.ColumnSpan="2"
             FontAttributes="Bold"
             FontSize="22"
             Text="Atividades disponíveis" />
 
         <ScrollView
-            Grid.Row="4"
+            Grid.Row="5"
             Grid.ColumnSpan="2"
             VerticalScrollBarVisibility="Never">
             <VerticalStackLayout Spacing="5">
