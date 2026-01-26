@@ -5,10 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="HomeView"
-    BackgroundColor="#000001">
+    BackgroundColor="#000000">
 
     <Grid
-        Padding="25,30"
+        Padding="15,30"
         ColumnDefinitions="*, *"
         ColumnSpacing="10"
         RowDefinitions="Auto, Auto, Auto, Auto, Auto, *"
@@ -37,7 +37,7 @@
                 HeightRequest="18"
                 HorizontalOptions="Center"
                 Stroke="Transparent"
-                StrokeShape="20"
+                StrokeShape="RoundRectangle 20"
                 VerticalOptions="Start"
                 WidthRequest="18">
 
@@ -123,102 +123,103 @@
         </Border>
 
         <Border
-            Grid.Row="2"
-            BackgroundColor="#111"
-            HeightRequest="100"
-            Stroke="Transparent"
-            StrokeShape="RoundRectangle 10"
-            VerticalOptions="Start">
-
-            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
-                <Image Source="events_tab.png" WidthRequest="33">
-                    <Image.Behaviors>
-                        <toolkit:IconTintColorBehavior TintColor="#4a8576" />
-                    </Image.Behaviors>
-                </Image>
-
-                <Label
-                    FontAttributes="Bold"
-                    FontSize="17"
-                    Text="Agenda"
-                    VerticalOptions="Center" />
-            </HorizontalStackLayout>
-        </Border>
-
-        <Border
-            Grid.Row="2"
-            Grid.Column="1"
-            BackgroundColor="#111"
-            HeightRequest="100"
-            Stroke="Transparent"
-            StrokeShape="RoundRectangle 10"
-            VerticalOptions="Start">
-
-            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
-                <Image Source="activities2_tab.png" WidthRequest="35">
-
-                    <Image.Behaviors>
-                        <toolkit:IconTintColorBehavior TintColor="#4a8576" />
-                    </Image.Behaviors>
-                </Image>
-
-                <Label
-                    FontAttributes="Bold"
-                    FontSize="17"
-                    Text="Atividades"
-                    VerticalOptions="Center" />
-            </HorizontalStackLayout>
-        </Border>
-
-        <Border
             Grid.Row="3"
-            BackgroundColor="#111"
-            HeightRequest="100"
+            Grid.ColumnSpan="2"
+            HeightRequest="200"
             Stroke="Transparent"
-            StrokeShape="RoundRectangle 10"
-            VerticalOptions="Start">
+            StrokeShape="RoundRectangle 15">
+            <Grid>
+                <Image Aspect="AspectFill" Source="carnaval.png" />
 
-            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
-                <Image Source="home_tab.png" WidthRequest="35">
-                    <Image.Behaviors>
-                        <toolkit:IconTintColorBehavior TintColor="#4a8576" />
-                    </Image.Behaviors>
-                </Image>
+                <VerticalStackLayout
+                    Padding="10"
+                    Spacing="15"
+                    VerticalOptions="End">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HorizontalTextAlignment="Center"
+                        Text="23 de Janeiro"
+                        TextColor="#fff"
+                        VerticalTextAlignment="End" />
 
-                <Label
-                    FontAttributes="Bold"
-                    FontSize="17"
-                    Text="Estrutura"
-                    VerticalOptions="Center" />
-            </HorizontalStackLayout>
+                    <Button
+                        CornerRadius="30"
+                        FontAttributes="Bold"
+                        HeightRequest="20"
+                        Text="Ver evento"
+                        TextColor="White"
+                        VerticalOptions="End"
+                        WidthRequest="100">
+
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1">
+                                <GradientStop Offset="0.0" Color="#FFB347" />
+                                <GradientStop Offset="0.5" Color="#FF8C1A" />
+                                <GradientStop Offset="1.0" Color="#E86F00" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </VerticalStackLayout>
+            </Grid>
         </Border>
 
-        <Border
-            Grid.Row="3"
-            Grid.Column="2"
-            BackgroundColor="#111"
-            HeightRequest="100"
-            Stroke="Transparent"
-            StrokeShape="RoundRectangle 10"
-            VerticalOptions="Start">
+        <Grid
+            Grid.Row="4"
+            Grid.ColumnSpan="2"
+            ColumnDefinitions="*, *"
+            ColumnSpacing="15"
+            RowDefinitions="Auto, Auto"
+            RowSpacing="10">
+            <Border HeightRequest="100" StrokeShape="RoundRectangle 13">
+                <Grid>
+                    <Image Aspect="AspectFill" Source="events_background.png" />
 
-            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
-                <Image Source="clock.png" WidthRequest="35">
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Image
+                            HeightRequest="60"
+                            Source="events.png"
+                            WidthRequest="60" />
 
-                    <Image.Behaviors>
-                        <toolkit:IconTintColorBehavior TintColor="#4a8576" />
-                    </Image.Behaviors>
-                </Image>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HorizontalTextAlignment="Center"
+                            Text="Eventos" />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
 
-                <Label
-                    FontAttributes="Bold"
-                    FontSize="17"
-                    Text="Agenda"
-                    VerticalOptions="Center" />
-            </HorizontalStackLayout>
-        </Border>
+            <Border
+                Grid.Column="1"
+                HeightRequest="100"
+                StrokeShape="RoundRectangle 13">
+                <Grid>
+                    <Image Aspect="AspectFill" Source="spaces_background.png" />
+                </Grid>
+            </Border>
 
-        <Label
+            <Border
+                Grid.Row="1"
+                HeightRequest="100"
+                StrokeShape="RoundRectangle 13">
+                <Grid>
+                    <Image Aspect="AspectFill" Source="guests_background.png" />
+                </Grid>
+            </Border>
+
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                HeightRequest="100"
+                StrokeShape="RoundRectangle 13">
+                <Grid>
+                    <Image Aspect="AspectFill" Source="information_background.png" />
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!--<Label
             Grid.Row="4"
             Grid.ColumnSpan="2"
             FontAttributes="Bold"
@@ -402,6 +403,6 @@
                     </HorizontalStackLayout>
                 </Border>
             </VerticalStackLayout>
-        </ScrollView>
+        </ScrollView>-->
     </Grid>
 </ContentPage>
