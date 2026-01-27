@@ -59,10 +59,10 @@
 
             <Border.Shadow>
                 <Shadow
-                    Brush="#0FA958"
-                    Offset="0,5"
-                    Radius="5"
-                    Opacity="0.7"/>
+                    Brush="#1ed760"
+                    Offset="0,3"
+                    Radius="15"
+                    Opacity=".6"/>
             </Border.Shadow>
             
             <Border.Background>
