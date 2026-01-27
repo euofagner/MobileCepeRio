@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="HomeView"
-    BackgroundColor="#000000">
+    BackgroundColor="#000">
 
     <Grid
         Padding="15,30"
@@ -57,6 +57,14 @@
             Stroke="Transparent"
             StrokeShape="RoundRectangle 16">
 
+            <Border.Shadow>
+                <Shadow
+                    Brush="#0FA958"
+                    Offset="0,5"
+                    Radius="5"
+                    Opacity="0.7"/>
+            </Border.Shadow>
+            
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="0.0" Color="#0A1A14" />
@@ -133,15 +141,24 @@
 
                 <VerticalStackLayout
                     Padding="10"
-                    Spacing="15"
+                    Spacing="12"
                     VerticalOptions="End">
                     <Label
                         FontAttributes="Bold"
-                        FontSize="16"
+                        FontFamily="MainFont"
+                        FontSize="17"
                         HorizontalTextAlignment="Center"
-                        Text="23 de Janeiro"
-                        TextColor="#fff"
-                        VerticalTextAlignment="End" />
+                        Text="13 de Fevereiro"
+                        TextColor="#FFF4E6"
+                        VerticalTextAlignment="End">
+                        <Label.Shadow>
+                            <Shadow
+                                Brush="#000"
+                                Opacity="0.7"
+                                Radius="10"
+                                Offset="5,5" />
+                        </Label.Shadow>
+                    </Label>
 
                     <Button
                         CornerRadius="30"
@@ -152,10 +169,14 @@
                         VerticalOptions="End"
                         WidthRequest="100">
 
+                        <Button.Shadow>
+                            <Shadow Brush="#C97C12" />
+                        </Button.Shadow>
+
                         <Button.Background>
                             <LinearGradientBrush StartPoint="0, 0" EndPoint="0, 1">
                                 <GradientStop Offset="0.0" Color="#FFB347" />
-                                <GradientStop Offset="0.5" Color="#FF8C1A" />
+                                <GradientStop Offset="0.6" Color="#FF8C1A" />
                                 <GradientStop Offset="1.0" Color="#E86F00" />
                             </LinearGradientBrush>
                         </Button.Background>
@@ -171,7 +192,10 @@
             ColumnSpacing="15"
             RowDefinitions="Auto, Auto"
             RowSpacing="10">
-            <Border HeightRequest="100" StrokeShape="RoundRectangle 13">
+            <Border
+                HeightRequest="100"
+                Stroke="Transparent"
+                StrokeShape="RoundRectangle 13">
                 <Grid>
                     <Image Aspect="AspectFill" Source="events_background.png" />
 
@@ -193,18 +217,49 @@
             <Border
                 Grid.Column="1"
                 HeightRequest="100"
+                Stroke="Transparent"
                 StrokeShape="RoundRectangle 13">
                 <Grid>
                     <Image Aspect="AspectFill" Source="spaces_background.png" />
+
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="60"
+                            Source="soccer_field.png"
+                            WidthRequest="140" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HorizontalTextAlignment="Center"
+                            Text="Espaços" />
+                    </VerticalStackLayout>
+
                 </Grid>
             </Border>
 
             <Border
                 Grid.Row="1"
                 HeightRequest="100"
+                Stroke="Transparent"
                 StrokeShape="RoundRectangle 13">
                 <Grid>
                     <Image Aspect="AspectFill" Source="guests_background.png" />
+
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="60"
+                            Source="guests.png"
+                            WidthRequest="170" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HorizontalTextAlignment="Center"
+                            Text="Meus Convidados" />
+                    </VerticalStackLayout>
                 </Grid>
             </Border>
 
@@ -212,9 +267,24 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 HeightRequest="100"
+                Stroke="Transparent"
                 StrokeShape="RoundRectangle 13">
                 <Grid>
                     <Image Aspect="AspectFill" Source="information_background.png" />
+
+                    <VerticalStackLayout VerticalOptions="Center">
+                        <Image
+                            Aspect="AspectFill"
+                            HeightRequest="60"
+                            Source="information.png"
+                            WidthRequest="155" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            HorizontalTextAlignment="Center"
+                            Text="Informações" />
+                    </VerticalStackLayout>
                 </Grid>
             </Border>
         </Grid>
