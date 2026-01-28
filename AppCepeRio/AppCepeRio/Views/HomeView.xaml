@@ -29,6 +29,12 @@
 
                 <Image.Behaviors>
                     <toolkit:IconTintColorBehavior TintColor="#fff" />
+
+                    <toolkit:AnimationBehavior AnimateOnTap="True">
+                        <toolkit:AnimationBehavior.AnimationType>
+                            <toolkit:FadeAnimation Length="150" Opacity=".5" />
+                        </toolkit:AnimationBehavior.AnimationType>
+                    </toolkit:AnimationBehavior>
                 </Image.Behaviors>
             </Image>
 
@@ -56,6 +62,14 @@
             HeightRequest="80"
             Stroke="Transparent"
             StrokeShape="RoundRectangle 16">
+
+            <Border.Behaviors>
+                <toolkit:AnimationBehavior AnimateOnTap="True">
+                    <toolkit:AnimationBehavior.AnimationType>
+                        <toolkit:FadeAnimation Length="250" Opacity=".6" />
+                    </toolkit:AnimationBehavior.AnimationType>
+                </toolkit:AnimationBehavior>
+            </Border.Behaviors>
 
             <!--<Border.Shadow>
                 <Shadow
@@ -196,6 +210,14 @@
                 HeightRequest="100"
                 Stroke="Transparent"
                 StrokeShape="RoundRectangle 13">
+                <Border.Behaviors>
+                    <toolkit:AnimationBehavior AnimateOnTap="True">
+                        <toolkit:AnimationBehavior.AnimationType>
+                            <toolkit:FadeAnimation Length="250" Opacity=".6" />
+                        </toolkit:AnimationBehavior.AnimationType>
+                    </toolkit:AnimationBehavior>
+                </Border.Behaviors>
+
                 <Grid>
                     <Image Aspect="AspectFill" Source="events_background.png" />
 
@@ -219,6 +241,13 @@
                 HeightRequest="100"
                 Stroke="Transparent"
                 StrokeShape="RoundRectangle 13">
+                <Border.Behaviors>
+                    <toolkit:AnimationBehavior AnimateOnTap="True">
+                        <toolkit:AnimationBehavior.AnimationType>
+                            <toolkit:FadeAnimation Length="250" Opacity=".6" />
+                        </toolkit:AnimationBehavior.AnimationType>
+                    </toolkit:AnimationBehavior>
+                </Border.Behaviors>
                 <Grid>
                     <Image Aspect="AspectFill" Source="spaces_background.png" />
 
@@ -244,6 +273,13 @@
                 HeightRequest="100"
                 Stroke="Transparent"
                 StrokeShape="RoundRectangle 13">
+                <Border.Behaviors>
+                    <toolkit:AnimationBehavior AnimateOnTap="True">
+                        <toolkit:AnimationBehavior.AnimationType>
+                            <toolkit:FadeAnimation Length="250" Opacity=".6" />
+                        </toolkit:AnimationBehavior.AnimationType>
+                    </toolkit:AnimationBehavior>
+                </Border.Behaviors>
                 <Grid>
                     <Image Aspect="AspectFill" Source="guests_background.png" />
 
@@ -269,6 +305,13 @@
                 HeightRequest="100"
                 Stroke="Transparent"
                 StrokeShape="RoundRectangle 13">
+                <Border.Behaviors>
+                    <toolkit:AnimationBehavior AnimateOnTap="True">
+                        <toolkit:AnimationBehavior.AnimationType>
+                            <toolkit:FadeAnimation Length="250" Opacity=".6" />
+                        </toolkit:AnimationBehavior.AnimationType>
+                    </toolkit:AnimationBehavior>
+                </Border.Behaviors>
                 <Grid>
                     <Image Aspect="AspectFill" Source="information_background.png" />
 
@@ -288,191 +331,5 @@
                 </Grid>
             </Border>
         </Grid>
-
-        <!--<Label
-            Grid.Row="4"
-            Grid.ColumnSpan="2"
-            FontAttributes="Bold"
-            FontSize="22"
-            Text="Atividades disponíveis" />
-
-        <ScrollView
-            Grid.Row="5"
-            Grid.ColumnSpan="2"
-            VerticalScrollBarVisibility="Never">
-            <VerticalStackLayout Spacing="5">
-                <Border
-                    BackgroundColor="#111"
-                    HeightRequest="100"
-                    Stroke="Transparent"
-                    StrokeShape="RoundRectangle 10"
-                    VerticalOptions="Start">
-
-                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
-                        <Image Aspect="Fill" Source="swimming.jpg" />
-
-                        <VerticalStackLayout VerticalOptions="Center">
-                            <Label
-                                FontAttributes="Bold"
-                                FontSize="17"
-                                Text="Natação"
-                                VerticalOptions="Center" />
-
-                            <Label
-                                FontSize="15"
-                                Text="05 de junho"
-                                TextColor="#ccc"
-                                VerticalOptions="Center" />
-                        </VerticalStackLayout>
-
-                    </HorizontalStackLayout>
-                </Border>
-
-                <Border
-                    Grid.Row="4"
-                    Grid.ColumnSpan="2"
-                    BackgroundColor="#111"
-                    HeightRequest="100"
-                    Stroke="Transparent"
-                    StrokeShape="RoundRectangle 10"
-                    VerticalOptions="Start">
-
-                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
-                        <Image Aspect="Fill" Source="tennis.jpg" />
-
-                        <VerticalStackLayout VerticalOptions="Center">
-                            <Label
-                                FontAttributes="Bold"
-                                FontSize="17"
-                                Text="Tenis"
-                                VerticalOptions="Center" />
-
-                            <Label
-                                FontSize="15"
-                                Text="05 de junho"
-                                TextColor="#ccc"
-                                VerticalOptions="Center" />
-                        </VerticalStackLayout>
-
-                    </HorizontalStackLayout>
-                </Border>
-
-                <Border
-                    Grid.Row="4"
-                    Grid.ColumnSpan="2"
-                    BackgroundColor="#111"
-                    HeightRequest="100"
-                    Stroke="Transparent"
-                    StrokeShape="RoundRectangle 10"
-                    VerticalOptions="Start">
-
-                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
-                        <Image Aspect="Fill" Source="futvolei.jpg" />
-
-                        <VerticalStackLayout VerticalOptions="Center">
-                            <Label
-                                FontAttributes="Bold"
-                                FontSize="17"
-                                Text="Futevôlei"
-                                VerticalOptions="Center" />
-
-                            <Label
-                                FontSize="15"
-                                Text="05 de junho"
-                                TextColor="#ccc"
-                                VerticalOptions="Center" />
-                        </VerticalStackLayout>
-
-                    </HorizontalStackLayout>
-                </Border>
-
-                <Border
-                    Grid.Row="4"
-                    Grid.ColumnSpan="2"
-                    BackgroundColor="#111"
-                    HeightRequest="100"
-                    Stroke="Transparent"
-                    StrokeShape="RoundRectangle 10"
-                    VerticalOptions="Start">
-
-                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
-                        <Image Aspect="Fill" Source="functional.jpg" />
-
-                        <VerticalStackLayout VerticalOptions="Center">
-                            <Label
-                                FontAttributes="Bold"
-                                FontSize="17"
-                                Text="Funcional"
-                                VerticalOptions="Center" />
-
-                            <Label
-                                FontSize="15"
-                                Text="05 de junho"
-                                TextColor="#ccc"
-                                VerticalOptions="Center" />
-                        </VerticalStackLayout>
-
-                    </HorizontalStackLayout>
-                </Border>
-
-                <Border
-                    Grid.Row="4"
-                    Grid.ColumnSpan="2"
-                    BackgroundColor="#111"
-                    HeightRequest="100"
-                    Stroke="Transparent"
-                    StrokeShape="RoundRectangle 10"
-                    VerticalOptions="Start">
-
-                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
-                        <Image Aspect="Fill" Source="tennis.jpg" />
-
-                        <VerticalStackLayout VerticalOptions="Center">
-                            <Label
-                                FontAttributes="Bold"
-                                FontSize="17"
-                                Text="Tenis"
-                                VerticalOptions="Center" />
-
-                            <Label
-                                FontSize="15"
-                                Text="05 de junho"
-                                TextColor="#ccc"
-                                VerticalOptions="Center" />
-                        </VerticalStackLayout>
-
-                    </HorizontalStackLayout>
-                </Border>
-
-                <Border
-                    Grid.Row="4"
-                    Grid.ColumnSpan="2"
-                    BackgroundColor="#111"
-                    HeightRequest="100"
-                    Stroke="Transparent"
-                    StrokeShape="RoundRectangle 10"
-                    VerticalOptions="Start">
-
-                    <HorizontalStackLayout HorizontalOptions="Start" Spacing="15">
-                        <Image Aspect="Fill" Source="swimming_class.jpg" />
-
-                        <VerticalStackLayout VerticalOptions="Center">
-                            <Label
-                                FontAttributes="Bold"
-                                FontSize="17"
-                                Text="Aula de natação"
-                                VerticalOptions="Center" />
-
-                            <Label
-                                FontSize="15"
-                                Text="05 de junho"
-                                TextColor="#ccc"
-                                VerticalOptions="Center" />
-                        </VerticalStackLayout>
-
-                    </HorizontalStackLayout>
-                </Border>
-            </VerticalStackLayout>
-        </ScrollView>-->
     </Grid>
 </ContentPage>
