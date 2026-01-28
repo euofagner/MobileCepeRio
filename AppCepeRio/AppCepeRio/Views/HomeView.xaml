@@ -57,14 +57,14 @@
             Stroke="Transparent"
             StrokeShape="RoundRectangle 16">
 
-            <Border.Shadow>
+            <!--<Border.Shadow>
                 <Shadow
                     Brush="#1ed760"
                     Offset="0,3"
                     Radius="15"
                     Opacity=".6"/>
-            </Border.Shadow>
-            
+            </Border.Shadow>-->
+
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Offset="0.0" Color="#0A1A14" />
@@ -251,14 +251,14 @@
                         <Image
                             Aspect="AspectFill"
                             HeightRequest="60"
-                            Source="guests.png"
-                            WidthRequest="170" />
+                            Source="doctor.png"
+                            WidthRequest="60" />
 
                         <Label
                             FontAttributes="Bold"
                             FontSize="16"
                             HorizontalTextAlignment="Center"
-                            Text="Meus Convidados" />
+                            Text="Exame médico" />
                     </VerticalStackLayout>
                 </Grid>
             </Border>

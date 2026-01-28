@@ -157,7 +157,15 @@
                     FontAttributes="Bold"
                     FontSize="16"
                     Text="Fazer login"
-                    TextColor="#13b158" />
+                    TextColor="#13b158">
+                    <Label.Behaviors>
+                        <toolkit:AnimationBehavior AnimateOnTap="True">
+                            <toolkit:AnimationBehavior.AnimationType>
+                                <toolkit:FadeAnimation Length="250" Opacity=".4" />
+                            </toolkit:AnimationBehavior.AnimationType>
+                        </toolkit:AnimationBehavior>
+                    </Label.Behaviors>
+                </Label>
             </HorizontalStackLayout>
         </VerticalStackLayout>
     </Grid>
