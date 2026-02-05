@@ -5,7 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="HomeView"
-    BackgroundColor="#000">
+    BackgroundColor="{AppThemeBinding Dark={StaticResource MainDarkBackgroundColor},
+                                      Light={StaticResource MainLightBackgroundColor}}"
+    Shell.NavBarIsVisible="False">
 
     <Grid
         Padding="15,30"
@@ -207,9 +209,15 @@
             RowDefinitions="Auto, Auto"
             RowSpacing="10">
             <Border
+                x:Name="FacialRecognitionBorder"
                 HeightRequest="100"
                 Stroke="Transparent"
                 StrokeShape="RoundRectangle 13">
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="FacialTapGestureRecognizer_Tapped" />
+                </Border.GestureRecognizers>
+
                 <Border.Behaviors>
                     <toolkit:AnimationBehavior AnimateOnTap="True">
                         <toolkit:AnimationBehavior.AnimationType>
@@ -224,14 +232,14 @@
                     <VerticalStackLayout VerticalOptions="Center">
                         <Image
                             HeightRequest="60"
-                            Source="events.png"
+                            Source="face_scan.png"
                             WidthRequest="60" />
 
                         <Label
                             FontAttributes="Bold"
                             FontSize="16"
                             HorizontalTextAlignment="Center"
-                            Text="Eventos" />
+                            Text="Biometria facial" />
                     </VerticalStackLayout>
                 </Grid>
             </Border>

@@ -7,6 +7,8 @@ namespace AppCepeRio
         public AppShell()
         {
             InitializeComponent();
+
+            Routing.RegisterRoute(nameof(FacialRecognition), typeof(FacialRecognition));
         }
     }
 }

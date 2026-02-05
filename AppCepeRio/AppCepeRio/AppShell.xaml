@@ -7,7 +7,7 @@
     xmlns:views="clr-namespace:AppCepeRio.Views"
     Title="AppCepeRio"
     Shell.FlyoutBehavior="Disabled"
-    Shell.NavBarIsVisible="False">
+    Shell.NavBarIsVisible="True">
 
     <ShellContent
         Title="OnBoarding"
@@ -48,4 +48,9 @@
             Route="ProfileView"
             Shell.TabBarUnselectedColor="#4a8576" />
     </TabBar>
+
+    <ShellContent
+        Title="Reconhecimento facial"
+        ContentTemplate="{DataTemplate views:FacialRecognition}"
+        Route="FacialRecognition" />
 </Shell>

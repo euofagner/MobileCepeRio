@@ -5,14 +5,14 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="LoginView"
-    BackgroundColor="{AppThemeBinding Dark={StaticResource Black},
-                                      Light={StaticResource White}}"
+    BackgroundColor="{AppThemeBinding Dark={StaticResource MainDarkBackgroundColor},
+                                      Light={StaticResource MainLightBackgroundColor}}"
     Shell.NavBarIsVisible="False">
 
     <ContentPage.Resources>
         <!--  Entry colors  -->
         <Color x:Key="DarkLoginEntryColor">#121212</Color>
-        <Color x:Key="LightLoginEntryColor">#eee</Color>
+        <Color x:Key="LightLoginEntryColor">#dddddd</Color>
 
         <!--  Placeholder color  -->
         <Color x:Key="DarkLoginPlaceholderColor">#aaa</Color>
@@ -89,6 +89,7 @@
                 HorizontalTextAlignment="Center"
                 Text="Primeira vez no app?"
                 TextColor="#13b158" />
+
             <Label
                 FontAttributes="Bold"
                 FontSize="18"
@@ -98,7 +99,7 @@
                 <Label.Behaviors>
                     <toolkit:AnimationBehavior AnimateOnTap="True">
                         <toolkit:AnimationBehavior.AnimationType>
-                            <toolkit:FadeAnimation Length="250" Opacity=".4" />
+                            <toolkit:FadeAnimation Length="250" Opacity=".5" />
                         </toolkit:AnimationBehavior.AnimationType>
                     </toolkit:AnimationBehavior>
                 </Label.Behaviors>
@@ -114,7 +115,7 @@
             <Label.Behaviors>
                 <toolkit:AnimationBehavior AnimateOnTap="True">
                     <toolkit:AnimationBehavior.AnimationType>
-                        <toolkit:FadeAnimation Length="250" Opacity=".4" />
+                        <toolkit:FadeAnimation Length="250" Opacity=".5" />
                     </toolkit:AnimationBehavior.AnimationType>
                 </toolkit:AnimationBehavior>
             </Label.Behaviors>
