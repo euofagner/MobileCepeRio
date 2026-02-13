@@ -3,27 +3,32 @@
     x:Class="AppCepeRio.Views.FacialRecognition"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="fwfef"
     BackgroundImageSource="cepe.png"
-    Shell.NavBarIsVisible="False"
+    Shell.ForegroundColor="White"
+    Shell.BackgroundColor="#13a246"
+    Shell.NavBarIsVisible="True"
     Shell.TabBarIsVisible="False">
 
     <VerticalStackLayout Padding="15" VerticalOptions="End">
-        <Border HeightRequest="230" StrokeShape="RoundRectangle 25">
+        <Border
+            HeightRequest="280"
+            StrokeShape="RoundRectangle 25"
+            StrokeThickness="0">
             <VerticalStackLayout
                 Padding="10"
                 HorizontalOptions="Start"
                 Spacing="10"
                 VerticalOptions="Center">
+
                 <Label
                     FontAttributes="Bold"
                     FontFamily="MainFont"
-                    FontSize="30"
+                    FontSize="33"
                     Text="O CEPE está em evolução." />
                 <Label
                     FontFamily="MainFont"
                     FontSize="21"
-                    Text="Agora utilizando biometria facial para melhor acesso" />
+                    Text="Agora utilizamos biometria facial para melhor acesso, garantir mais segurança, agilidade na entrada e na piscina." />
                 <Button
                     BackgroundColor="#1ed760"
                     CornerRadius="25"
@@ -31,9 +36,8 @@
                     FontSize="15"
                     Text="Cadastrar biometria"
                     TextColor="White" />
+
             </VerticalStackLayout>
         </Border>
-
-
     </VerticalStackLayout>
 </ContentPage>

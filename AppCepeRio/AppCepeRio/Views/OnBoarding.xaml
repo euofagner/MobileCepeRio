@@ -17,9 +17,6 @@
         <!--<Color x:Key="MainDarkBackgroundColor">#1e1e1e</Color>
     <Color x:Key="MainLightBackgroundColor">#000</Color>-->
 
-        <Color x:Key="BorderDarkBackground">#151515</Color>
-        <Color x:Key="BorderLightBackground">#dddddd</Color>
-
         <!--<Style x:Key="ViewBackground" TargetType="ContentPage">
         <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource MainDarkBackgroundColor}, Light={StaticResource MainLightBackgroundColor}}" />
     </Style>-->

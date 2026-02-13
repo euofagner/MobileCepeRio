@@ -6,4 +6,9 @@ public partial class ProfileView : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private async void LogoutBtn_Clicked(object sender, EventArgs e)
+    {
+		await Shell.Current.GoToAsync("//LoginView");
+    }
 }

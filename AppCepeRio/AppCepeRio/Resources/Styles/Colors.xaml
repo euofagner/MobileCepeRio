@@ -4,13 +4,20 @@
     <!--  Note: For Android please see also Platforms\Android\Resources\values\colors.xml  -->
 
     <Color x:Key="MainDarkBackgroundColor">#1e1e1e</Color>
-    <Color x:Key="MainLightBackgroundColor">#eeeeee</Color>
+    <Color x:Key="MainLightBackgroundColor">#ffffff</Color>
 
+    <Color x:Key="HomeBackgroundColor">#000000</Color>
+
+    <Color x:Key="LoginDarkBackgroundColor">#000000</Color>
+    
     <Color x:Key="BorderDarkBackground">#151515</Color>
     <Color x:Key="BorderLightBackground">#dddddd</Color>
 
     <Color x:Key="DarkModeGreenButton">#13b158</Color>
     <Color x:Key="LightModeGreenButton">#1cca5a</Color>
+
+    <Color x:Key="DarkModeCreatePassword">#ccc</Color>
+    <Color x:Key="LightModeCreatePassword">#111</Color>
 
     <Color x:Key="GrayLabelTitle">#eee</Color>
     <Color x:Key="GrayLabelOnBoarding">#eee</Color>

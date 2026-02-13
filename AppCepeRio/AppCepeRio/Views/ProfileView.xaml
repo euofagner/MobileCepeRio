@@ -1,12 +1,390 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCepeRio.Views.ProfileView"
-             Title="ProfileView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+    x:Class="AppCepeRio.Views.ProfileView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    Title="Perfil"
+    BackgroundColor="#000"
+    Shell.BackgroundColor="#000"
+    Shell.NavBarIsVisible="True"
+    Shell.TitleColor="White">
+
+    <Grid
+        Padding="15"
+        RowDefinitions="Auto, Auto, Auto, Auto, Auto, *"
+        RowSpacing="15">
+        <Image Source="settings.png" />
+        <Border
+            Grid.ColumnSpan="2"
+            HeightRequest="130"
+            Stroke="Transparent"
+            StrokeShape="RoundRectangle 16">
+
+            <Border.Shadow>
+                <Shadow
+                    Brush="#1ed760"
+                    Opacity=".6"
+                    Radius="15"
+                    Offset="0,2" />
+            </Border.Shadow>
+
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Offset="0.0" Color="#0A1A14" />
+                    <GradientStop Offset="0.5" Color="#1A2A1B" />
+                    <GradientStop Offset="1.0" Color="#0F2E21" />
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid ColumnDefinitions="80, *, Auto" RowDefinitions="*, *">
+                <Grid Grid.RowSpan="2" Padding="0,0">
+                    <Image
+                        HeightRequest="110"
+                        Source="cepelogo.png"
+                        WidthRequest="110" />
+
+                    <Border
+                        Margin="0,35,8,0"
+                        BackgroundColor="#1FA37A"
+                        HeightRequest="19"
+                        HorizontalOptions="End"
+                        Stroke="Transparent"
+                        StrokeShape="RoundRectangle 18"
+                        WidthRequest="19">
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="11"
+                            HeightRequest="19"
+                            HorizontalTextAlignment="Center"
+                            Text="✔"
+                            VerticalTextAlignment="Center"
+                            WidthRequest="19" />
+                    </Border>
+                </Grid>
+
+                <VerticalStackLayout
+                    Grid.Column="1"
+                    Padding="5,5"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center">
+                    <Label
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        Padding="0,2"
+                        FontAttributes="Bold"
+                        FontFamily="MainFont"
+                        FontSize="19"
+                        HorizontalOptions="Start"
+                        Text="Fagner da Silva" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        FontSize="15"
+                        Text="CPF: 540.157.***-**"
+                        TextColor="#ccc" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        FontSize="15"
+                        Text="Matrícula: 0000123"
+                        TextColor="#ccc" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        FontSize="15"
+                        Text="Data de nascimento: 18/04/1900"
+                        TextColor="#ccc" />
+                </VerticalStackLayout>
+
+                <Border
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Margin="0,0,20,0"
+                    BackgroundColor="#1a754d"
+                    HeightRequest="30"
+                    Stroke="Transparent"
+                    StrokeShape="RoundRectangle 15"
+                    WidthRequest="100">
+
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="4">
+                        <Label
+                            FontSize="14"
+                            HorizontalTextAlignment="Center"
+                            Text="Sócio"
+                            VerticalTextAlignment="Center" />
+
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="14"
+                            HorizontalTextAlignment="Center"
+                            Text="Efetivo"
+                            VerticalTextAlignment="Center" />
+                    </HorizontalStackLayout>
+                </Border>
+            </Grid>
+        </Border>
+
+        <Label
+            Grid.Row="1"
+            FontAttributes="Bold"
+            FontFamily="MainFont"
+            FontSize="17"
+            Text="Situação no Clube"
+            TextColor="#699b87" />
+
+        <Grid Grid.Row="2">
+            <Border
+                BackgroundColor="#142820"
+                Stroke="Transparent"
+                StrokeShape="RoundRectangle 15">
+                <VerticalStackLayout Padding="15" Spacing="7">
+                    <HorizontalStackLayout>
+                        <Image Margin="0,0,10,0" Source="stethoscope.png">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="#5fab83" />
+                            </Image.Behaviors>
+                        </Image>
+                        <Label FontSize="15" Text="Exame médico: " />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            Text="Válido "
+                            TextColor="#1abe55" />
+                        <Label FontSize="15" Text="até 00/00/0000" />
+                    </HorizontalStackLayout>
+
+                    <Border Opacity=".3" />
+
+                    <HorizontalStackLayout>
+                        <Image Margin="0,0,10,0" Source="check.png">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="#5fab83" />
+                            </Image.Behaviors>
+                        </Image>
+                        <Label FontSize="15" Text="Mensalidade: " />
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            Text="Em dia"
+                            TextColor="#1abe55" />
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+
+        <Label
+            Grid.Row="3"
+            FontAttributes="Bold"
+            FontFamily="MainFont"
+            FontSize="17"
+            Text="Ações Rápidas"
+            TextColor="#699b87" />
+
+        <!--#region Ações Rápidas-->
+        <Grid Grid.Row="4">
+            <Border Stroke="Transparent" StrokeShape="RoundRectangle 15">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                        <GradientStop Offset="0.0" Color="#2C3E2F" />
+                        <GradientStop Offset="0.5" Color="#123D32" />
+                        <GradientStop Offset="1.0" Color="#0D1F1A" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <VerticalStackLayout Padding="10,10" Spacing="6">
+                    <Grid ColumnDefinitions="25, *, Auto">
+                        <Image
+                            HeightRequest="25"
+                            Source="edit.png"
+                            WidthRequest="25">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="#5fab83" />
+                            </Image.Behaviors>
+                        </Image>
+                        <Label
+                            Grid.Column="1"
+                            Padding="10,0"
+                            FontSize="16"
+                            Text="Editar dados" />
+                        <Image
+                            Grid.Column="2"
+                            Margin="10,0"
+                            HeightRequest="20"
+                            Source="more_than.png"
+                            WidthRequest="20">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="White" />
+                            </Image.Behaviors>
+                        </Image>
+                    </Grid>
+
+                    <Border Opacity=".5 " />
+
+                    <Grid ColumnDefinitions="25, *, Auto">
+                        <Image
+                            HeightRequest="25"
+                            Source="padlock.png"
+                            WidthRequest="25">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="#5fab83" />
+                            </Image.Behaviors>
+                        </Image>
+                        <Label
+                            Grid.Column="1"
+                            Padding="10,0"
+                            FontSize="16"
+                            Text="Alterar senha" />
+                        <Image
+                            Grid.Column="2"
+                            Margin="10,0"
+                            HeightRequest="20"
+                            Source="more_than.png"
+                            WidthRequest="20">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="White" />
+                            </Image.Behaviors>
+                        </Image>
+                    </Grid>
+
+                    <Border Opacity=".5 " />
+
+                    <Grid ColumnDefinitions="25, *, Auto">
+                        <Image
+                            HeightRequest="25"
+                            Source="facial_recognition_icon.png"
+                            WidthRequest="25">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="#5fab83" />
+                            </Image.Behaviors>
+                        </Image>
+                        <Label
+                            Grid.Column="1"
+                            Padding="10,0"
+                            FontSize="16"
+                            Text="Cadastrar biometria facial" />
+                        <Image
+                            Grid.Column="2"
+                            Margin="10,0"
+                            HeightRequest="20"
+                            Source="more_than.png"
+                            WidthRequest="20">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="White" />
+                            </Image.Behaviors>
+                        </Image>
+                    </Grid>
+
+                    <Border Opacity=".5 " />
+
+                    <Grid ColumnDefinitions="25, *, Auto">
+                        <Image
+                            HeightRequest="25"
+                            Source="people.png"
+                            WidthRequest="25">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="#5fab83" />
+                            </Image.Behaviors>
+                        </Image>
+                        <Label
+                            Grid.Column="1"
+                            Padding="10,0"
+                            FontSize="16"
+                            Text="Gerenciar dependentes" />
+                        <Image
+                            Grid.Column="2"
+                            Margin="10,0"
+                            HeightRequest="20"
+                            Source="more_than.png"
+                            WidthRequest="20">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="White" />
+                            </Image.Behaviors>
+                        </Image>
+                    </Grid>
+
+                    <Border Opacity=".5 " />
+
+                    <Grid ColumnDefinitions="25, *, Auto">
+                        <Image
+                            HeightRequest="25"
+                            Source="agenda.png"
+                            WidthRequest="25">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="#5fab83" />
+                            </Image.Behaviors>
+                        </Image>
+                        <Label
+                            Grid.Column="1"
+                            Padding="10,0"
+                            FontSize="16"
+                            Text="Histórico de exames" />
+                        <Image
+                            Grid.Column="2"
+                            Margin="10,0"
+                            HeightRequest="20"
+                            Source="more_than.png"
+                            WidthRequest="20">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="White" />
+                            </Image.Behaviors>
+                        </Image>
+                    </Grid>
+
+                    <Border Opacity=".5 " />
+
+                    <Grid ColumnDefinitions="25, *, Auto">
+                        <Image
+                            HeightRequest="25"
+                            Source="note.png"
+                            WidthRequest="25">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="#5fab83" />
+                            </Image.Behaviors>
+                        </Image>
+                        <Label
+                            Grid.Column="1"
+                            Padding="10,0"
+                            FontSize="16"
+                            Text="Termos e regulamentos" />
+                        <Image
+                            Grid.Column="2"
+                            Margin="10,0"
+                            HeightRequest="20"
+                            Source="more_than.png"
+                            WidthRequest="20">
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="White" />
+                            </Image.Behaviors>
+                        </Image>
+                    </Grid>
+                </VerticalStackLayout>
+            </Border>
+        </Grid>
+        <!--#endregion-->
+
+        <Button
+            x:Name="LogoutBtn"
+            Clicked="LogoutBtn_Clicked"
+            Grid.Row="5"
+            CornerRadius="30"
+            FontSize="17"
+            HeightRequest="1"
+            Text="Sair da conta"
+            TextColor="White">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Offset="0.0" Color="#3B0F12" />
+                    <GradientStop Offset="0.5" Color="#7A1E24" />
+                    <GradientStop Offset="1.0" Color="#A62D34" />
+                </LinearGradientBrush>
+            </Button.Background>
+
+            <Button.ImageSource>
+                <FileImageSource File="white_logout.png" />
+            </Button.ImageSource>
+        </Button>
+    </Grid>
 </ContentPage>

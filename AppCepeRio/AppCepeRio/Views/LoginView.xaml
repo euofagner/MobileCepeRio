@@ -5,18 +5,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="LoginView"
-    BackgroundColor="{AppThemeBinding Dark={StaticResource MainDarkBackgroundColor},
+    BackgroundColor="{AppThemeBinding Dark={StaticResource LoginDarkBackgroundColor},
                                       Light={StaticResource MainLightBackgroundColor}}"
     Shell.NavBarIsVisible="False">
 
     <ContentPage.Resources>
         <!--  Entry colors  -->
-        <Color x:Key="DarkLoginEntryColor">#121212</Color>
+        <Color x:Key="DarkLoginEntryColor">#111111</Color>
         <Color x:Key="LightLoginEntryColor">#dddddd</Color>
 
         <!--  Placeholder color  -->
         <Color x:Key="DarkLoginPlaceholderColor">#aaa</Color>
-        <Color x:Key="LightLoginPlaceholderColor">#6f7b82</Color>
+        <Color x:Key="LightLoginPlaceholderColor">#333</Color>
 
         <!--  Login Button  -->
         <Color x:Key="DarkLoginButton">#239a51</Color>
@@ -95,7 +95,7 @@
                 FontSize="18"
                 HorizontalTextAlignment="Center"
                 Text="Criar senha"
-                TextColor="#ddd">
+                TextColor="{AppThemeBinding Dark={StaticResource DarkModeCreatePassword}, Light={StaticResource LightModeCreatePassword}}">
                 <Label.Behaviors>
                     <toolkit:AnimationBehavior AnimateOnTap="True">
                         <toolkit:AnimationBehavior.AnimationType>
